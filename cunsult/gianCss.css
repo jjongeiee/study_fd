@@ -1,0 +1,65 @@
+body {
+    display: grid;
+    padding: 50px 50px 50px 50px;
+    border: 4px gray;
+    border-style: dashed solid;
+    grid-template-columns: 400px 10fr 1fr;
+}
+
+ul li {
+    list-style: none;
+}
+
+#etc{
+    margin-top: 10px;
+}
+
+#leftSide {
+    display: flex;
+}
+
+#explanation {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    font-size:1em;
+    font-style:bold;
+}
+
+#input {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    font-size:1.2em;
+}
+
+#input input {
+    margin-bottom: 0px;
+}
+
+
+#description{
+    border: 2px rgb(112, 86, 14) groove;
+    margin: 20px 0px 0px 100px;
+    padding: 20px 40px 20px 40px;
+    line-height: 30px;
+}
+
+#Comp {
+    margin-top: 30px;
+}
+
+
+
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* #etc{
+    height: 60px;
+} */

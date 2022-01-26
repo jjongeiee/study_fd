@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gianCss.css">
+    <title>Document</title>
+</head>
+<body>
+    <span id="leftSide">
+    <ul id="explanation">
+        <li>이름 </li>
+        <li>프로젝트 기업명 </li>
+        <li>면접전형 일자 </li>
+        <li>비용지급 요청일자 </li>
+        <li>진행부서 </li>
+        <li>총 원가액 </li>
+        <li>기타 특이사항 </li>
+    </ul>
+    <ul id="input">
+        <li><input type="text" id="Member" name="MembersName"placeholder="이름입력"></li>
+        <li><input type="text" id="Company" name="CompanyName" placeholder="고객사입력"></li>
+        <li><input type="date" id="Calendar"></li>
+        <li><input type="date" id="Calendar2"></li>
+        <li><input type="text" id="TeamN" name="Teamdlfma" placeholder="소속부서입력"></li>
+        <li><input type="text" id="Money" name="ChongMoney" placeholder="계산식입력"></li>
+        <input type="text" id="etc" name="기타사항" placeholder="입력">
+    </ul>
+        </span>
+    <script>
+        function printName(){
+            var MemberName = document.getElementById('Member').value;
+            var firstLetter = `안녕하세요.\n선발평가팀 ${MemberName}입니다.\n아래와 같이 기안을 요청드립니다.`
+            //hihi에 퍼스트레터 내용 넣기
+            document.getElementById("hihi").innerText = firstLetter; 
+            
+            //콤파니 입력창 값 불러오기
+            var CompName = document.getElementById('Company').value; 
+            //날짜선택 입력 값 불러오기
+            var ViewDate = document.getElementById('Calendar').value;
+            var ViewDate2 = document.getElementById('Calendar2').value;
+            //계산식 값 불러오기(계산은 안되는거임)
+            var Math = (document.getElementById('Money').value);
+            //계산식 값 계산해주기
+            var Price = eval(Math);
+            //소속부서 입력창 값 불러오기
+            var TeamName = document.getElementById('TeamN').value; 
+            //기타특이사항
+            var gita = document.getElementById('etc').value;
+
+            //변수들 앞에서 입력한애들 자동입력
+            var SecondLetter = `1. 프로젝트 기업명 : ${CompName}
+            2. 면접전형 일자 : ${ViewDate}
+            3. 비용지급 요청일자 : ${ViewDate2}
+            4. 진행부서 : ${TeamName}
+            5. 총 원가액 : ${Price}
+            6. 기타특이사항 : ${gita}
+            
+            감사합니다.
+            ${MemberName}드림.`;
+            document.getElementById("Comp").innerText = SecondLetter;
+        }
+
+    </script>
+    <div id="description">
+        여기에 내용 출력 Crtl + C, V
+        <div id="hihi"></div>
+        <div id="Comp"></div>
+    </div>
+    <div id="PayDay"></div>
+
+    <input id="play" type="button" value = "변환" onclick="printName()">
+</body>
+</html>
